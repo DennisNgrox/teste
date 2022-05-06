@@ -69,3 +69,5 @@ curl -s -H  'Content-Type: application/json-rpc' -d "
 }" ${ZABBIX_API}
 
 ---------------------------------
+
+for i in $(cat lista.txt) ; do  SERVICE=$(echo $i | cut -d\; -f1); ./item.sh $SERVICE; done
